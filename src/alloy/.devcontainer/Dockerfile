@@ -13,7 +13,7 @@ ARG ZSH_IN_DOCKER_VERSION=1.1.5
 
 # add microsoft rpm package repo and install packages
 RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc \
-    && curl -o /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/37/prod.repo \
+    && curl -o /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/40/prod.repo \
     && dnf -y install sudo git zsh gzip tar nano findutils $DOTNET_SDK_PACKAGE \
     && dnf -y clean all \
     && dotnet workload update
