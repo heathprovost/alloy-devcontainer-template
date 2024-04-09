@@ -1,0 +1,24 @@
+{
+  "name": "Alloy",
+  "build": { 
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": { 
+          "zsh": { 
+            "path": "/bin/zsh" 
+          } 
+        }
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "dbaeumer.vscode-eslint",
+        "davidanson.vscode-markdownlint"
+      ]
+    }
+  },
+  "remoteUser": "alloy"
+}

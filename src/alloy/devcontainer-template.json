@@ -1,0 +1,11 @@
+{
+  "id": "alloy",
+  "version": "1.0.0",
+  "name": "Alloy",
+  "description": "A dev container template for Alloy development",
+  "documentationURL": "https://github.com/StullerInc/alloy-devcontainer-template/tree/main/src/alloy",
+  "licenseURL": "https://github.com/StullerInc/alloy-devcontainer-template/blob/main/LICENSE",
+  "platforms": [
+    "Any"
+  ]
+}
