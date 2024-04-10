@@ -12,7 +12,7 @@ ARG NODE_VERSION=lts/iron
 ARG ZSH_IN_DOCKER_VERSION=1.1.5
 
 # install system packages
-RUN dnf -y install sudo git zsh gzip tar nano findutils hostname nc bind-utils \
+RUN dnf -y install sudo langpacks-en git zsh gzip tar nano findutils hostname nc bind-utils \
     # java
     java-1.8.0-amazon-corretto java-11-amazon-corretto-headless \
     # dotnet dependencies
@@ -42,11 +42,12 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
+
 # set user to non-root user for rest of installation
 USER $USERNAME
 
 # custom software installation
-RUN echo "Running custom software installation" \
+RUN echo "user software installation" \
     # setup nvm - https://github.com/nvm-sh/nvm
     && bash -c "$(curl -L https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh)" \
     && . ~/.nvm/nvm.sh \
