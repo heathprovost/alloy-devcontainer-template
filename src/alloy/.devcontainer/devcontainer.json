@@ -24,7 +24,6 @@
     "GITHUB_ORG": "${localEnv:GIT_HUB_PKG_ORG}",
     "GITHUB_TOKEN": "${localEnv:GIT_HUB_PKG_TOKEN}"
   },
-  "workspaceFolder": "/home/alloy/development",
 	"postCreateCommand": "printf \"\\033[1;32mYou should run 'npm ci' in a new terminal after this one closes to install dependencies\\033[0m\\n\"",
   "remoteUser": "alloy"
 }
