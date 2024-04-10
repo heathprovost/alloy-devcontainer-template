@@ -21,7 +21,7 @@
     }
   },
   "containerEnv": {
-    "GITHUB_ORG": "@stullerinc",
+    "GITHUB_ORG": "${localEnv:GIT_HUB_PKG_ORG}",
     "GITHUB_TOKEN": "${localEnv:GIT_HUB_PKG_TOKEN}"
   },
   "workspaceFolder": "/home/alloy/development",
